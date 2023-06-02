@@ -1,0 +1,6 @@
+name: oval
+title: Oval
+version: 2.5
+prerelease: -beta.1
+nav:
+- nav.adoc
