@@ -1,6 +1,6 @@
 :doctype: book
 
-image:https://github.com/PerpetuumProgress/OVAL-Platform/blob/dev/public/android-chrome-512x512.png
+image:https://github.com/PerpetuumProgress/OVAL-Platform/blob/dev/public/android-chrome-512x512.png[banner,link=https://www.perpetuum-progress.io]
 
 = OVAL Platform
 
