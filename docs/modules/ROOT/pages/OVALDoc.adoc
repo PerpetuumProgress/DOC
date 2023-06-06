@@ -21,7 +21,7 @@ image:https://github.com/oceanprotocol/market/workflows/CI/badge.svg[Build Statu
 * <<testing,🤖 Testing>>
 * <<code-style,✨ Code Style>>
 * <<production,🛳 Production>>
-* <<-deployment,⬆️ Deployment>>
+* <<deployment,⬆️ Deployment>>
 * <<contributing,💖 Contributing>>
 * <<forking,🍴 Forking>>
 * <<pricing-options,💰 Pricing Options>>
