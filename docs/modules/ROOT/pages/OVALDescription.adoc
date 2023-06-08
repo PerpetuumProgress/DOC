@@ -1,0 +1,39 @@
+
+= OVAL Description image:https://raw.githubusercontent.com/PerpetuumProgress/DOC/main/images/OvalLogo.png[OVAL,128,128]
+
+
+
+
+:doctype: book
+
+
+
+With virtual homologation in mind, we build a platform, OVAL, that can be used for secure data exchange across industries.
+
+OVAL is based on the Ocean protocol and offers the data providers a way to lend their data by selling the access rights to it instead of the data itself.
+
+It empowers OEMs to validate their driving functions and assists suppliers to validate their simulation models using the models and datasets available on the OVAL platform while keeping the functions and models within their premise.
+
+ 
+
+Interested? Check it out!! https://oval.pepro.io/
+
+In order to use the content or to download them feel free to contact us at info@pepro.io. We will help in setting up a free wallet for you.
+#  Documentatio about all datasets and algorithms offered in the OVAL Marketplace.
+
+== Key Facts
+
+image::https://raw.githubusercontent.com/PerpetuumProgress/DOC/main/images/KeyFacts.png[Key Facts, 1024,1024]
+
+== Architecture / Deployment
+
+image::https://raw.githubusercontent.com/PerpetuumProgress/DOC/main/images/Architecture.png[Architecture,1024,1024]
+
+== Advantages over Legacy Solutions
+
+image::https://raw.githubusercontent.com/PerpetuumProgress/DOC/main/images/Advantages.png[Advantages,1024,1024]
+
+== Compute to Data
+
+image::https://raw.githubusercontent.com/PerpetuumProgress/DOC/main/images/ComputetoData.png[ComputetoData,1024,1024]
+

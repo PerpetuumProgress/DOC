@@ -1,0 +1,17 @@
+= Perpetuum Progress image:https://raw.githubusercontent.com/PerpetuumProgress/DOC/main/images/PerpetuumProgress.jpg[Perpetuum Progress,128,128]
+
+
+:doctype: book
+
+Perpetuum Progress is an independent, founder-driven company headquarted in Ingolstadt – Munich Area – Germany.
+
+Our heart is beating for the development of autonomous mobility.
+
+Since our foundation in 2020, our international team is working on open-standard based platform for virtual validation of autonomous mobility.
+
+Besides the product driven development we are working as an engineering partner in serial development for OEMs and First-Tiers. Also in consortium research projects we develop innovative solutions on the way to autonomous mobility. The combined experience of this two fields enables us to create our own innovative platform as a service: OpenValidation Plattform (OVAL).
+
+Many years of experience in the field of automotive development and simulation, combined with an international network of engineering and research experts allows us the powerful realisation of today’s hot-topics: Virtual Reality / Simulation, Cloud Computing, Security and Blockchain.
+
+https://perpetuum-progress.io/
+
