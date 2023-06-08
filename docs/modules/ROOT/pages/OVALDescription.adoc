@@ -1,7 +1,7 @@
 
-= OVAL Description image:https://raw.githubusercontent.com/PerpetuumProgress/DOC/main/images/OvalLogo.png[OVAL,128,128]
+= OVAL Description 
 
-
+image:https://raw.githubusercontent.com/PerpetuumProgress/DOC/main/images/OvalLogo.png[OVAL,128,128]
 
 
 :doctype: book
