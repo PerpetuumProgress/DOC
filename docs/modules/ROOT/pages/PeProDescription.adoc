@@ -1,5 +1,4 @@
-= Perpetuum Progress image:https://raw.githubusercontent.com/PerpetuumProgress/DOC/main/images/PerpetuumProgress.jpg[Perpetuum Progress,128,128]
-
+= Perpetuum Progress 
 
 :doctype: book
 
@@ -15,3 +14,4 @@ Many years of experience in the field of automotive development and simulation, 
 
 https://perpetuum-progress.io/
 
+image::https://raw.githubusercontent.com/PerpetuumProgress/DOC/main/images/PerpetuumProgress.jpg[Perpetuum Progress,128,128]
