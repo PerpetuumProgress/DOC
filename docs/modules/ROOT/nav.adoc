@@ -1,1 +1,2 @@
 * xref:OVALDoc.adoc[]
+* xref:OVALAssets.adoc[]
