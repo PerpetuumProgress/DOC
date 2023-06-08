@@ -1,7 +1,7 @@
-= OVAL-Marketplace
+= OVAL Marketplace
 :doctype: book
 
-#  Documentatio about all datasets and algorithms offered in the OVAL Marketplace.
+#  Documentation about all datasets and algorithms offered in the OVAL Marketplace.
 
 == Docker HUB
 
