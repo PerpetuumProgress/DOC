@@ -1,6 +1,6 @@
 :doctype: book
 
-image::https://raw.githubusercontent.com/oceanprotocol/art/master/github/repo-banner%402x.png
+image::https://raw.githubusercontent.com/oceanprotocol/art/master/github/repo-banner%402x.png[]
 
 = OCEAN Protocol
 
