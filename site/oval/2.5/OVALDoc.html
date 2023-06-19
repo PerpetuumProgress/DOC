@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OVAL Docs</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">OVAL Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="oval" data-version="2.5">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Oval</span>
+    <span class="version">2.5-beta.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">Oval</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2.5-beta.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="OVALDoc.html" class="home-link is-current"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/PerpetuumProgress/DOC/edit/main/docs/modules/ROOT/pages/OVALDoc.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://oceanprotocol.com"><img src="https://raw.githubusercontent.com/oceanprotocol/art/master/github/repo-banner%402x.png" alt="banner"></a>
+</div>
+</div>
+</div>
+</div>
+<h1 id="_oval_platform" class="sect0"><a class="anchor" href="#_oval_platform"></a>OVAL Platform</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p><span class="image"><a class="image" href="https://github.com/oceanprotocol/market/actions"><img src="https://github.com/oceanprotocol/market/workflows/CI/badge.svg" alt="Build Status"></a></span> <span class="image"><a class="image" href="https://app.netlify.com/sites/market-oceanprotocol/deploys"><img src="https://api.netlify.com/api/v1/badges/c85f4d8b-95e1-4010-95a4-2bacd8b90981/deploy-status" alt="Netlify Status"></a></span> <span class="image"><a class="image" href="https://codeclimate.com/repos/5e3933869a31771fd800011c/maintainability"><img src="https://api.codeclimate.com/v1/badges/d114f94f75e6efd2ee71/maintainability" alt="Maintainability"></a></span> <span class="image"><a class="image" href="https://codeclimate.com/github/oceanprotocol/market/test_coverage"><img src="https://api.codeclimate.com/v1/badges/da71759866eb8313d7c2/test_coverage" alt="Test Coverage"></a></span> <span class="image"><a class="image" href="https://github.com/oceanprotocol/eslint-config-oceanprotocol"><img src="https://img.shields.io/badge/js-oceanprotocol-7b1173.svg" alt="js oceanprotocol"></a></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Table of Contents</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#get-started">🏄 Get Started</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#local-components-with-barge">Local components with Barge</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="#environment-variables">🦑 Environment variables</a></p>
+</li>
+<li>
+<p><a href="#data-sources">🦀 Data Sources</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#aquarius">Aquarius</a></p>
+</li>
+<li>
+<p><a href="#ocean-protocol-subgraph">Ocean Protocol Subgraph</a></p>
+</li>
+<li>
+<p><a href="#3box">3Box</a></p>
+</li>
+<li>
+<p><a href="#purgatory">Purgatory</a></p>
+</li>
+<li>
+<p><a href="#network-metadata">Network Metadata</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="#storybook">👩‍🎤 Storybook</a></p>
+</li>
+<li>
+<p><a href="#testing">🤖 Testing</a></p>
+</li>
+<li>
+<p><a href="#code-style">✨ Code Style</a></p>
+</li>
+<li>
+<p><a href="#production">🛳 Production</a></p>
+</li>
+<li>
+<p>&lt;&#8592;deployment,⬆️ Deployment&gt;&gt;</p>
+</li>
+<li>
+<p><a href="#contributing">💖 Contributing</a></p>
+</li>
+<li>
+<p><a href="#forking">🍴 Forking</a></p>
+</li>
+<li>
+<p><a href="#pricing-options">💰 Pricing Options</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#dynamic-pricing">Dynamic Pricing</a></p>
+</li>
+<li>
+<p><a href="#fixed-pricing">Fixed Pricing</a></p>
+</li>
+<li>
+<p><a href="#free-pricing">Free Pricing</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="#gdpr-compliance">✅ GDPR Compliance</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#multi-language-privacy-policies">Multi-Language Privacy Policies</a></p>
+</li>
+<li>
+<p><a href="#privacy-preference-center">Privacy Preference Center</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#privacy-preference-center-styling">Privacy Preference Center Styling</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="#license">🏛 License</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_get_started"><a class="anchor" href="#_get_started"></a>🏄 Get Started</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The app is a React app built with <a href="https://nextjs.org">Next.js</a> + TypeScript + CSS modules and will connect to Ocean remote components by default.</p>
+</div>
+<div class="paragraph">
+<p>To start local development:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone git@github.com:oceanprotocol/market.git
+
+cd market
+
+# when using nvm to manage Node.js versions
+nvm use
+
+npm install
+npm start</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will start the development server under <code>http://localhost:8000</code>.</p>
+</div>
+<h3 id="_local_components_with_barge" class="discrete">Local components with Barge</h3>
+<div class="paragraph">
+<p>If you prefer to connect to locally running components instead of remote connections, you can spin up <a href="https://github.com/oceanprotocol/barge"><code>barge</code></a> and use a local Ganache network in another terminal before running <code>npm start</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone git@github.com:oceanprotocol/barge.git
+cd barge
+
+# startup with local Ganache node
+
+./start_ocean.sh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Barge will deploy contracts to the local Ganache node which will take some time.
+At the end the compiled artifacts need to be copied over to this project into <code>node_modules/@oceanprotocol/contracts/artifacts</code>.
+This script will do that for you:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./scripts/copy-contracts.sh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally, set environment variables to use this local connection in <code>.env</code> in the app:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># modify env variables cp .env.example .env
+
+npm start</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To use the app together with MetaMask, importing one of the accounts auto-generated by the Ganache container is the easiest way to have test ETH available.
+All of them have 100 ETH by default.
+Upon start, the <code>ocean_ganache_1</code> container will print out the private keys of multiple accounts in its logs.
+Pick one of them and import into MetaMask.</p>
+</div>
+<div class="paragraph">
+<p>To fully test all <a href="https://thegraph.com">The Graph</a> integrations, you have to run your own local Graph node with our <a href="https://github.com/oceanprotocol/ocean-subgraph"><code>ocean-subgraph</code></a> deployed to it.
+Barge does not include a local subgraph so by default, the <code>subgraphUri</code> is hardcoded to the Rinkeby subgraph in our <a href="https://github.com/oceanprotocol/market/blob/d0b1534d105e5dcb3790c65d4bb04ff1d2dbc575/src/utils/ocean.ts#L31"><code>getDevelopmentConfig</code> function</a>.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Cleaning all Docker images so they are fetched freshly is often a good idea to make sure no issues are caused by old or stale images: <code>docker system prune --all --volumes</code></p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_environment_variables"><a class="anchor" href="#_environment_variables"></a>🦑 Environment variables</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>app.config.js</code> file is setup to prioritize environment variables for setting each Ocean component endpoint.
+By setting environment variables, you can easily switch between Ocean networks the app connects to, without directly modifying <code>app.config.js</code>.</p>
+</div>
+<div class="paragraph">
+<p>For local development, you can use a <code>.env</code> file:</p>
+</div>
+<div class="paragraph">
+<p>`bash # modify env variables, Rinkeby is enabled by default when using those files cp .env.example .env `</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_data_sources"><a class="anchor" href="#_data_sources"></a>🦀 Data Sources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All displayed data in the app is presented around the concept of one data set, which is a combination of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>metadata about a data set</p>
+</li>
+<li>
+<p>the actual data set files</p>
+</li>
+<li>
+<p>the NFT which represents the data set</p>
+</li>
+<li>
+<p>the datatokens representing access rights to the data set files</p>
+</li>
+<li>
+<p>financial data connected to these datatokens, either a pool or a fixed rate exchange contract</p>
+</li>
+<li>
+<p>calculations and conversions based on financial data</p>
+</li>
+<li>
+<p>metadata about publisher accounts</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All this data then comes from multiple sources:</p>
+</div>
+<div class="sect2">
+<h3 id="_aquarius"><a class="anchor" href="#_aquarius"></a>Aquarius</h3>
+<div class="paragraph">
+<p>All initial data sets and their metadata (DDO) is retrieved client-side on run-time from the <a href="https://github.com/oceanprotocol/aquarius">Aquarius</a> instance, defined in <code>app.config.js</code>.
+All app calls to Aquarius are done with 2 internal methods which mimic the same methods in ocean.js, but allow us:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>to cancel requests when components get unmounted in combination with <a href="https://github.com/axios/axios">axios</a></p>
+</li>
+<li>
+<p>hit Aquarius as early as possible without relying on any ocean.js initialization</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Aquarius runs Elasticsearch under the hood so its stored metadata can be queried with <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/full-text-queries.html">Elasticsearch queries</a> like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-tsx hljs" data-lang="tsx">import { QueryResult } from '@oceanprotocol/lib/dist/node/metadatacache/MetadataCache' import { queryMetadata } from '@utils/aquarius'
+
+const queryLatest = {   query: {     // https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html     query_string: { query: `-isInPurgatory:true` }   },   sort: { created: 'desc' } }
+
+function Component() {   const { appConfig } = useMarketMetadata()   const [result, setResult] = useState+++&lt;QueryResult&gt;+++()+++&lt;/QueryResult&gt;+++
+
+useEffect(() \=&gt; {     if (!appConfig.metadataCacheUri) return     const source = axios.CancelToken.source()
+
+....
+async function init() {
+  const result = await queryMetadata(query, source.token)
+  setResult(result)
+}
+init()
+
+return () =&gt; {
+  source.cancel()
+}
+....
+
+}, [appConfig.metadataCacheUri, query])
+
+return &lt;div&gt;\{result}&lt;/div&gt; }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For components within a single data set view the <code>useAsset()</code> hook can be used, which in the background gets the respective metadata from Aquarius.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-tsx hljs" data-lang="tsx">import { useAsset } from '@context/Asset'
+
+function Component() {   const { ddo } = useAsset()   return &lt;div&gt;\{ddo}&lt;/div&gt; }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ocean_protocol_subgraph"><a class="anchor" href="#_ocean_protocol_subgraph"></a>Ocean Protocol Subgraph</h3>
+<div class="paragraph">
+<p>Most financial data in the market is retrieved with GraphQL from <a href="https://github.com/oceanprotocol/ocean-subgraph">our own subgraph</a>, rendered on top of the initial data coming from Aquarius.</p>
+</div>
+<div class="paragraph">
+<p>The app has <a href="https://formidable.com/open-source/urql/docs/basics/react-preact/">Urql Client</a> setup to query the respective subgraph based on network.
+In any component this client can be used like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-tsx hljs" data-lang="tsx">import { gql, useQuery } from 'urql'
+
+const query = gql``   query PoolLiquidity($id: ID!, $shareId: ID) {     pool(id: $id) {       id       totalShares     }   } ``
+
+function Component() {   const { data } = useQuery(query, {}, pollInterval: 5000 })   return &lt;div&gt;\{data}&lt;/div&gt; }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3box"><a class="anchor" href="#_3box"></a>3Box</h3>
+<div class="paragraph">
+<p>Publishers can create a profile on <a href="https://www.3box.io/hub">3Box Hub</a> and when found, it will be displayed in the app.</p>
+</div>
+<div class="paragraph">
+<p>For this our own <a href="https://github.com/oceanprotocol/3box-proxy">3box-proxy</a> is used, within the app the utility method <code>get3BoxProfile()</code> can be used to get all info:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-tsx hljs" data-lang="tsx">import get3BoxProfile from '@utils/profile'
+
+function Component() {   const [profile, setProfile] = useState+++&lt;Profile&gt;+++()+++&lt;/Profile&gt;+++
+
+useEffect(() \=&gt; {     if (!account) return     const source = axios.CancelToken.source()
+
+....
+async function get3Box() {
+  const profile = await get3BoxProfile(account, source.token)
+  if (!profile) return
+
+  setProfile(profile)
+}
+get3Box()
+
+return () =&gt; {
+  source.cancel()
+}
+....
+
+}, [account])   return (     &lt;div&gt;       {profile.emoji} {profile.name}     &lt;/div&gt;   ) }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_purgatory"><a class="anchor" href="#_purgatory"></a>Purgatory</h3>
+<div class="paragraph">
+<p>Based on <a href="https://github.com/oceanprotocol/list-purgatory">list-purgatory</a> some data sets get additional data.
+Within most components this can be done with the internal <code>useAsset()</code> hook which fetches data from the <a href="https://github.com/oceanprotocol/market-purgatory">market-purgatory</a> endpoint in the background.</p>
+</div>
+<div class="paragraph">
+<p>For asset purgatory:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-tsx hljs" data-lang="tsx">import { useAsset } from '@context/Asset'
+
+function Component() {   const { isInPurgatory, purgatoryData } = useAsset()   return isInPurgatory ?
+&lt;div&gt;{purgatoryData.reason}&lt;/div&gt; : null }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For account purgatory:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-tsx hljs" data-lang="tsx">import { useWeb3 } from '@context/Web3' import { useAccountPurgatory } from '@hooks/useAccountPurgatory'
+
+function Component() {   const { accountId } = useWeb3()   const { isInPurgatory, purgatoryData } = useAccountPurgatory(accountId)   return isInPurgatory ?
+&lt;div&gt;{purgatoryData.reason}&lt;/div&gt; : null }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_network_metadata"><a class="anchor" href="#_network_metadata"></a>Network Metadata</h3>
+<div class="paragraph">
+<p>All displayed chain &amp; network metadata is retrieved from <code>https://chainid.network</code> on build time and integrated into NEXT&#8217;s GraphQL layer.
+This data source is a community-maintained GitHub repository under <a href="https://github.com/ethereum-lists/chains">ethereum-lists/chains</a>.</p>
+</div>
+<div class="paragraph">
+<p>Within components this metadata can be queried for under <code>allNetworksMetadataJson</code>.
+The <code>useWeb3()</code> hook does this in the background to expose the final <code>networkDisplayName</code> for use in components:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-tsx hljs" data-lang="tsx">export default function NetworkName(): ReactElement {   const { networkId, isTestnet } = useWeb3()   const { networksList } = useNetworkMetadata()   const networkData = getNetworkDataById(networksList, networkId)   const networkName = getNetworkDisplayName(networkData, networkId)
+
+return (     &lt;&gt;       \{networkName} {isTestnet &amp;&amp; `(Test)`}     &lt;/&gt;   ) }</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_storybook"><a class="anchor" href="#_storybook"></a>👩‍🎤 Storybook</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Storybook helps us build UI components in isolation from our app&#8217;s business logic, data, and context.
+That makes it easy to develop hard-to-reach states and save these UI states as stories to revisit during development, testing, or QA.</p>
+</div>
+<div class="paragraph">
+<p>To start adding stories, create a <code>index.stories.tsx</code> inside the component&#8217;s folder:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>src
+└─── components
+│   └─── @shared
+│       └───
+│            │   index.tsx
+│            │   index.module.css
+│            │   index.stories.tsx
+│            │   index.test.tsx
+&lt;/pre&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Starting up the Storybook server with this command will make it accessible under <code><a href="http://localhost:6006" class="bare">http://localhost:6006</a></code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm run storybook</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to build a portable static version under <code>storybook-static/</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm run storybook:build</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testing"><a class="anchor" href="#_testing"></a>🤖 Testing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Test runs utilize [Jest](<a href="https://jestjs.io/" class="bare">https://jestjs.io/</a>) as test runner and [Testing Library](<a href="https://testing-library.com/docs/react-testing-library/intro" class="bare">https://testing-library.com/docs/react-testing-library/intro</a>) for writing tests.</p>
+</div>
+<div class="paragraph">
+<p>All created Storybook stories will automatically run as individual tests by using the [StoryShots Addon](<a href="https://storybook.js.org/addons/@storybook/addon-storyshots" class="bare">https://storybook.js.org/addons/@storybook/addon-storyshots</a>).</p>
+</div>
+<div class="paragraph">
+<p>Creating Storybook stories for a component will provide good coverage of a component in many cases. Additional tests for dedicated component functionality which can&#8217;t be done with Storybook are created as usual [Testing Library](<a href="https://testing-library.com/docs/react-testing-library/intro" class="bare">https://testing-library.com/docs/react-testing-library/intro</a>) tests, but you can also [import exisiting Storybook stories](<a href="https://storybook.js.org/docs/react/writing-tests/importing-stories-in-tests#example-with-testing-library" class="bare">https://storybook.js.org/docs/react/writing-tests/importing-stories-in-tests#example-with-testing-library</a>) into those tests.</p>
+</div>
+<div class="paragraph">
+<p>Executing linting, type checking, and full test run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm test</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which is a combination of multiple scripts which can also be run individually:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm run lint
+npm run type-check
+npm run jest</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A coverage report is automatically shown in console whenever <code>npm run jest</code> is called. Generated reports are sent to CodeClimate during CI runs.</p>
+</div>
+<div class="paragraph">
+<p>During local development you can continously get coverage report feedback in your console by running Jest in watch mode:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm run jest:watch</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_code_style"><a class="anchor" href="#_code_style"></a>✨ Code Style</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Code style is automatically enforced through [ESLint](<a href="https://eslint.org" class="bare">https://eslint.org</a>) &amp; [Prettier](<a href="https://prettier.io" class="bare">https://prettier.io</a>) rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Git pre-commit hook runs <code>prettier</code> on staged files, setup with [Husky](<a href="https://typicode.github.io/husky" class="bare">https://typicode.github.io/husky</a>)</p>
+</li>
+<li>
+<p>VS Code suggested extensions and settings for auto-formatting on file save</p>
+</li>
+<li>
+<p>CI runs a linting &amp; TypeScript typings check as part of <code>npm test</code>, and fails if errors are found</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For running linting and auto-formatting manually, you can use from the root of the project:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># linting check
+npm run lint
+
+# auto format all files in the project with prettier, taking all configs into account
+npm run format</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_production"><a class="anchor" href="#_production"></a>🛳 Production</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To create a production build, run from the root of the project:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">npm run build
+
+# serve production build
+npm run serve</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deployment"><a class="anchor" href="#_deployment"></a>⬆️ Deployment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Every branch or Pull Request is automatically deployed to multiple hosts for redundancy and emergency reasons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[Netlify](<a href="https://netlify.com" class="bare">https://netlify.com</a>)</p>
+</li>
+<li>
+<p>[Vercel](<a href="https://vercel.com" class="bare">https://vercel.com</a>)</p>
+</li>
+<li>
+<p>[S3](<a href="https://aws.amazon.com/s3/" class="bare">https://aws.amazon.com/s3/</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A link to a preview deployment will appear under each Pull Request.</p>
+</div>
+<div class="paragraph">
+<p>The latest deployment of the <code>main</code> branch is automatically aliased to <code>market.oceanprotocol.com</code>, where the deployment on Netlify is the current live deployment.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contributing"><a class="anchor" href="#_contributing"></a>💖 Contributing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We welcome contributions in form of bug reports, feature requests, code changes, or documentation improvements. Have a look at our contribution documentation for instructions and workflows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[<strong>Ways to Contribute →</strong>](<a href="https://docs.oceanprotocol.com/concepts/contributing/" class="bare">https://docs.oceanprotocol.com/concepts/contributing/</a>)</p>
+</li>
+<li>
+<p>[Code of Conduct →](<a href="https://docs.oceanprotocol.com/concepts/code-of-conduct/" class="bare">https://docs.oceanprotocol.com/concepts/code-of-conduct/</a>)</p>
+</li>
+<li>
+<p>[Reporting Vulnerabilities →](<a href="https://docs.oceanprotocol.com/concepts/vulnerabilities/" class="bare">https://docs.oceanprotocol.com/concepts/vulnerabilities/</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_forking"><a class="anchor" href="#_forking"></a>🍴 Forking</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We encourage you to fork this repository and create your own data marketplace. When you publish your forked version of this market there are a few elements that you are required to change for copyright reasons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The typeface is copyright protected and needs to be changed unless you purchase a license for it.</p>
+</li>
+<li>
+<p>The Ocean Protocol logo is a trademark of the Ocean Protocol Foundation and must be removed from forked versions of the market.</p>
+</li>
+<li>
+<p>The name "OVAL Platform" is also copyright protected and should be changed to the name of your market.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally, we would also advise that your retain the text saying "Powered by Ocean Protocol" on your forked version of the marketplace in order to give credit for the development work done by the Ocean Protocol team.</p>
+</div>
+<div class="paragraph">
+<p>Everything else is made open according to the apache2 license. We look forward to seeing your data marketplace!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pricing_options"><a class="anchor" href="#_pricing_options"></a>💰 Pricing Options</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_dynamic_pricing"><a class="anchor" href="#_dynamic_pricing"></a>Dynamic Pricing</h3>
+<div class="paragraph">
+<p>To allow publishers to set pricing as "Dynamic" you need to add the following environmental variable to your .env file: <code>NEXT_PUBLIC_ALLOW_DYNAMIC_PRICING="true"</code> (default).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fixed_pricing"><a class="anchor" href="#_fixed_pricing"></a>Fixed Pricing</h3>
+<div class="paragraph">
+<p>To allow publishers to set pricing as "Fixed" you need to add the following environmental variable to your .env file: <code>NEXT_PUBLIC_ALLOW_FIXED_PRICING="true"</code> (default).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_free_pricing"><a class="anchor" href="#_free_pricing"></a>Free Pricing</h3>
+<div class="paragraph">
+<p>To allow publishers to set pricing as "Free" you need to add the following environmental variable to your .env file: <code>NEXT_PUBLIC_ALLOW_FREE_PRICING="true"</code> (default).</p>
+</div>
+<div class="paragraph">
+<p>This allocates the datatokens to the [dispenser contract](<a href="https://github.com/oceanprotocol/contracts/blob/main/contracts/dispenser/Dispenser.sol" class="bare">https://github.com/oceanprotocol/contracts/blob/main/contracts/dispenser/Dispenser.sol</a>) which dispenses data tokens to users for free. Publishers in your market will now be able to offer their datasets to users for free (excluding gas costs).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gdpr_compliance"><a class="anchor" href="#_gdpr_compliance"></a>✅ GDPR Compliance</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OVAL Platform comes with prebuilt components for you to customize to cover GDPR requirements. Find additional information on how to use them below.</p>
+</div>
+<div class="sect2">
+<h3 id="_multi_language_privacy_policies"><a class="anchor" href="#_multi_language_privacy_policies"></a>Multi-Language Privacy Policies</h3>
+<div class="paragraph">
+<p>Feel free to adopt our provided privacy policies to your needs. Per default we cover four different languages: English, German, Spanish and French. Please be advised, that you will need to adjust some paragraphs in the policies depending on your market setup (e.g. the use of cookies). You can easily add or remove policies by providing your own markdown files in the <code>content/pages/privacy</code> directory. For guidelines on how to format your markdown files refer to our provided policies. The pre-linked content tables for these files are automatically generated.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_privacy_preference_center"><a class="anchor" href="#_privacy_preference_center"></a>Privacy Preference Center</h3>
+<div class="paragraph">
+<p>Additionally, OVAL Platform provides a privacy preference center for you to use. This feature is disabled per default since we do not use cookies requiring consent on our deployment of the market. However, if you need to add some functionality depending on cookies, you can simply enable this feature by changing the value of the <code>NEXT_PUBLIC_PRIVACY_PREFERENCE_CENTER</code> environmental variable to <code>"true"</code> in your <code>.env</code> file. This will enable a customizable cookie banner stating the use of your individual cookies. The content of this banner can be adjusted within the <code>content/gdpr.json</code> file. If no <code>optionalCookies</code> are provided, the privacy preference center will be set to a simpler version displaying only the <code>title</code>, <code>text</code> and <code>close</code>-button. This can be used to inform the user about the use of essential cookies, where no consent is needed. The privacy preference center supports two different styling options: <code>'small'</code> and <code>'default'</code>. Setting the style propertie to <code>'small'</code> will display a smaller cookie banner to the user at first, only showing the default styled privacy preference center upon the user&#8217;s customization request.</p>
+</div>
+<div class="paragraph">
+<p>Now your market users will be provided with additional options to toggle the use of your configured cookie consent categories. You can always retrieve the current consent status per category with the provided <code>useConsent()</code> hook. See below, how you can set your own custom cookies depending on the market user&#8217;s consent. Feel free to adjust the provided utility functions for cookie usage provided in the <code>src/utils/cookies.ts</code> file to your needs.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-tsx hljs" data-lang="tsx">import { CookieConsentStatus, useConsent } from '@context/CookieConsent'
+import { deleteCookie, setCookie } from '@utils/cookies'
+
+// ...
+
+const { cookies, cookieConsentStatus } = useConsent()
+
+cookies.map((cookie) =&gt; {
+  const consent = cookieConsentStatus[cookie.cookieName]
+
+  switch (consent) {
+    case CookieConsentStatus.APPROVED:
+      // example logic
+      setCookie(`YOUR_COOKIE_NAME`, 'VALUE')
+      break
+
+    case CookieConsentStatus.REJECTED:
+    case CookieConsentStatus.NOT_AVAILABLE:
+    default:
+      // example logic
+      deleteCookie(`YOUR_COOKIE_NAME`)
+      break
+  }
+})</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_privacy_preference_center_styling"><a class="anchor" href="#_privacy_preference_center_styling"></a>Privacy Preference Center Styling</h4>
+<div class="paragraph">
+<p>The privacy preference centre has two styling options <code>default</code> and <code>small</code>. The default view shows all of the customization options on a full-height side banner. When the <code>small</code> setting is used, a much smaller banner is shown which only reveals all of the customization options when the user clicks "Customize".</p>
+</div>
+<div class="paragraph">
+<p>The style can be changed by altering the <code>style</code> prop in the <code>PrivacyPreferenceCenter</code> component in <code>src/components/App.tsx</code>. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">&lt;PrivacyPreferenceCenter style="small" /&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_license"><a class="anchor" href="#_license"></a>🏛 License</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Copyright 2022 Ocean Protocol Foundation Ltd.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
